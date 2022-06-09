@@ -1,3 +1,12 @@
+let playerScore = 0
+let computerScore = 0
+
+
+
+
+
+
+
 // This function will randomly select either rock, paper, or scissors
 
 function computerPlay() {
@@ -16,20 +25,21 @@ function computerPlay() {
 function playRound (playerSelection, computerSelection){
     if ( playerSelection === computerSelection ) {
     return('tie!')
-    } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-        return('Rock loses to Paper!')
-    }  else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-        return ('Rock beats Scissors')
-    }   else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-        return ('Paper loses to Scissors')
-    }   else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-        return ('Paper beats Rock')
-    }   else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-        return ('Scissors loses to Rock')
-    }   else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-        return ('Scissors beats Paper')
-    } 
-}
+    } if ((playerSelection === 'Rock' && computerSelection === 'Scissors' ) ||
+          (playerSelection === 'Paper' && computerSelection === 'Rock') ||
+          (playerSelection === 'Scissors' && computerSelection === 'Paper')){
+              playerScore++
+          
+    } if ((computerSelection === 'Rock' && playerSelection === 'Scissors') ||
+          (computerSelection === 'Paper' && playerSelection === 'Rock') ||
+          (computerSelection === 'Scissors' && playerSelection === 'Paper')) 
+              computerScore++
+    }
+    
+
+
+
+    
  
 
 
@@ -41,7 +51,9 @@ function playRound (playerSelection, computerSelection){
 function game () {
     let playerSelection = prompt ('Rock, Paper, or Scissors?');
     let computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(`Player has chosen ${playerSelection} and the computer has chosen ${computerSelection}`)
+    return(playRound(playerSelection, computerSelection));
+    
     
 
 }
@@ -55,4 +67,15 @@ function game () {
 
 for (let i = 1; i <= 5; i++) {
     game()
-}
+    console.log(playerScore)
+    console.log(computerScore)
+    
+    }
+
+    if (playerScore > computerScore){
+        console.log('The player wins')
+    }else if (playerScore = computerScore) {
+        console.log('It is a tie!')    
+    }else if (playerScore < computerScore){
+        console.log('The computer wins!')
+    }
