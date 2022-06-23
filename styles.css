@@ -1,0 +1,123 @@
+h1 {
+    text-align: center;
+}
+
+#container{
+    background-color: aqua;
+    width: 1000px;
+    min-height: 806px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 50px
+    
+}
+
+#scoreResult {
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    
+    
+}
+
+.Display {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+
+
+#computerRockDisplay, #computerPaperDisplay, #computerScissorDisplay {
+    
+    width: 200px;
+    height: 250px;
+    left: 500px;
+}
+
+#playerRockDisplay, #playerPaperDisplay, #playerScissorDisplay {
+    width: 200px;
+    height: 250px;
+    left: 1000px;
+
+}
+
+
+
+
+
+
+
+
+#Rock {
+    display: flex;
+    background-image: url("Images/Rock.png");
+    background-size: 200px 250px;
+    background-repeat: no-repeat;
+    border: 0;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    margin-left: 450px;
+    min-width: 200px;
+
+
+}
+
+
+#Paper {
+    background-image: url("Images/Paper.png");
+    background-size: 200px 250px;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    min-width: 200px;
+}
+#Scissors {
+    background-image: url("Images/Scissors.png");
+    background-size: 200px 250px;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    margin-right: 450px;
+    min-width: 200px;
+}
+
+.choicesComputer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+
+}
+
+
+.scores {
+    padding-top: 50px;
+    text-align: center;
+}

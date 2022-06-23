@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
+
+<h1> Rock, Paper, Scissors?</h1>
+
+<!-- Lower part of UI, has RPS choices and shows the score below images-->
+
+<div id = container>
+
+    <div class="choices">
+        <button class="rps" id = "Rock"> </button>
+        <button class="rps" id = "Paper"></button>
+        <button class="rps" id = "Scissors"> </button>
+    </div>
+
+    <div class = "scores" >
+        <div id="playerScore"> Player score: 0 </div>
+        <div id = "computerScore"> Computer score: 0 </div>
+    </div>
+
+    <div id = "scoreResult"> Results:</div>
+
+    <div id="playerChoice"></div>
+    <div id="computerChoice"> </div>
+
+
+    <!-- Displays the player and computer choice in the display menu-->
+    <div class = Display> 
+        <div class= "playerDisplay">
+            <img id="playerRockDisplay" style="display: none" src="Images/Rock.png">
+            <img id="playerPaperDisplay" style="display: none" src="Images/Paper.png">
+            <img id="playerScissorDisplay" style="display: none" src="Images/Scissors.png"> 
+        </div>
+
+        <div class = computerDisplay>
+            <img id="computerRockDisplay" style="display: none" src="Images/Rock.png">
+            <img id="computerPaperDisplay" style="display: none" src="Images/Paper.png">
+            <img id="computerScissorDisplay" style="display: none" src="Images/Scissors.png">
+        </div>
+    </div>
+
+    <div id="playerChoice"></div>
+    <div id="computerChoice"></div>
+</div>
+
+<!-- Displays the score result in the middle of the screen between the two images-->
+
+<div id = "finalResult"> Final Result:</div>
+
+<!-- Lower part of UI, has RPS choices and shows the score below images-->
+
+
+
+
+
+
 </body>
 </html>
